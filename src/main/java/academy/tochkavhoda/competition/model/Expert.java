@@ -3,23 +3,22 @@ package academy.tochkavhoda.competition.model;
 import lombok.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Getter
 @Setter
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
-
 public class Expert extends User {
     private List<String> expertDirections = new ArrayList<>();
-    private List<ExpertRating> ratings = new ArrayList<>();
+    // Удалили список ratings
 
     public Expert(String login, String password, String firstName,
                   String lastName, List<String> expertDirections) {
         super(login, password, firstName, lastName);
         this.expertDirections = expertDirections != null ? expertDirections : new ArrayList<>();
     }
+
     @Override
     public String getUserRole() {
         return "EXPERT";
