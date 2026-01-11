@@ -1,7 +1,8 @@
 package academy.tochkavhoda.competition.dto.response;
 
-import academy.tochkavhoda.competition.model.UserType;
 import lombok.*;
+
+import java.util.List;
 
 @Builder
 @ToString
@@ -14,6 +15,8 @@ public class UserResponseDto {
     private Long id;
     private String firstName;
     private String lastName;
-    private UserType userType;
+    private String role;
     private boolean isActive;
+    private String companyName;
+    private List<String> expertDirections;
 }
